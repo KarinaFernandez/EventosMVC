@@ -1,0 +1,106 @@
+﻿@model EventosUYMVC.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Usuario</legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Ci)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ci)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nombre)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Apellido)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Apellido)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Telefono)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Telefono)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Rol)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rol)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Ci }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+
+<h3>Eventos reservados</h3>
+
+<fieldset>
+    <legend>Reservas</legend>
+
+
+    <table>
+        <tr>
+
+            <th>
+                @Html.Label("Id")
+            </th>
+            <th>
+                @Html.Label("Titulo")
+            </th>
+            <th>
+                @Html.Label("Fecha")
+            </th>
+
+        </tr>
+        @foreach (var item in Model.EventosFavoritosList)
+        {
+    
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+
+            </tr>
+    
+        }
+    </table>
+</fieldset>

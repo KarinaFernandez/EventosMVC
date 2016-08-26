@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventosUYMVC", "EventosUYMVC\EventosUYMVC.csproj", "{F2A660B4-92AA-46B8-AA4B-367256342F3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilidades", "ClassLibrary1\Utilidades.csproj", "{3B5BD330-400D-440F-BBE9-9567031D264A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2A660B4-92AA-46B8-AA4B-367256342F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2A660B4-92AA-46B8-AA4B-367256342F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2A660B4-92AA-46B8-AA4B-367256342F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2A660B4-92AA-46B8-AA4B-367256342F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5BD330-400D-440F-BBE9-9567031D264A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5BD330-400D-440F-BBE9-9567031D264A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5BD330-400D-440F-BBE9-9567031D264A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5BD330-400D-440F-BBE9-9567031D264A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,90 @@
+﻿@model EventosUYMVC.Models.Evento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Evento</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Titulo)
+        @Html.DisplayFor(model => model.Titulo)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Descripcion)
+        @Html.DisplayFor(model => model.Descripcion)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Artistas)
+        @Html.DisplayFor(model => model.Artistas)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Fecha)
+        @Html.DisplayFor(model => model.Fecha)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Hora)
+        @Html.DisplayFor(model => model.Hora)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.DireccionLugar)
+        @Html.DisplayFor(model => model.DireccionLugar)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.BarrioLugar)
+        @Html.DisplayFor(model => model.BarrioLugar)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.DescripcionLugar)
+        @Html.DisplayFor(model => model.DescripcionLugar)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.NombreLugar)
+        @Html.DisplayFor(model => model.NombreLugar)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.EntradasVendidas)
+        @Html.DisplayFor(model => model.EntradasVendidas)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Capacidad)
+        @Html.DisplayFor(model => model.Capacidad)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Precio.Categoria)
+        @Html.DisplayFor(model => model.Precio.Categoria)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Precio.Descripcion)
+        @Html.DisplayFor(model => model.Precio.Descripcion)
+        
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Precio.Valor)
+        @Html.DisplayFor(model => model.Precio.Valor)
+        
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Activo)
+        @Html.DisplayFor(model => model.Activo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

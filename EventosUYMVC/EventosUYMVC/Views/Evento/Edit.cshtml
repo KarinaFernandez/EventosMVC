@@ -1,0 +1,158 @@
+﻿@model EventosUYMVC.Models.Evento
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Evento</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Titulo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Titulo)
+            @Html.ValidationMessageFor(model => model.Titulo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Descripcion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Descripcion)
+            @Html.ValidationMessageFor(model => model.Descripcion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Artistas)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Artistas)
+            @Html.ValidationMessageFor(model => model.Artistas)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fecha)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fecha)
+            @Html.ValidationMessageFor(model => model.Fecha)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Hora)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Hora)
+            @Html.ValidationMessageFor(model => model.Hora)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DireccionLugar)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DireccionLugar)
+            @Html.ValidationMessageFor(model => model.DireccionLugar)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BarrioLugar)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BarrioLugar)
+            @Html.ValidationMessageFor(model => model.BarrioLugar)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DescripcionLugar)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DescripcionLugar)
+            @Html.ValidationMessageFor(model => model.DescripcionLugar)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NombreLugar)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NombreLugar)
+            @Html.ValidationMessageFor(model => model.NombreLugar)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EntradasVendidas)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EntradasVendidas)
+            @Html.ValidationMessageFor(model => model.EntradasVendidas)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Capacidad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Capacidad)
+            @Html.ValidationMessageFor(model => model.Capacidad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Imagen)
+        </div>
+        <div class="editor-field">
+            @using (Html.BeginForm("FileUpload", "Home",
+                    FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input name="archivo" type="file" />
+            }
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Precio.Categoria)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Precio.Categoria)
+            @Html.ValidationMessageFor(model => model.Precio.Categoria)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Precio.Descripcion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Precio.Descripcion)
+            @Html.ValidationMessageFor(model => model.Precio.Descripcion)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Precio.Valor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Precio.Valor)
+            @Html.ValidationMessageFor(model => model.Precio.Valor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Activo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Activo)
+            @Html.ValidationMessageFor(model => model.Activo)
+        </div>
+
+        <p>
+            <input type="submit" value="Salvar" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
